@@ -71,16 +71,16 @@ print(tokens.input_ids)
 
 ### 3) DataCollator
 
--   배치 단위 데이터 준비
--   Padding 자동 처리, Task-specific Collator 제공
+- 배치 단위 데이터 준비  
+- Padding 자동 처리, Task-specific Collator 제공  
 
-  Task                   Collator
-  ---------------------- --------------------------------------
-  기본                   `DefaultDataCollator`
-  Padding                `DataCollatorWithPadding`
-  MLM(Masked LM)         `DataCollatorForLanguageModeling`
-  Seq2Seq                `DataCollatorForSeq2Seq`
-  Token Classification   `DataCollatorForTokenClassification`
+| Task                   | Collator                                |
+|------------------------|------------------------------------------|
+| 기본                   | `DefaultDataCollator`                   |
+| Padding                | `DataCollatorWithPadding`               |
+| MLM (Masked LM)        | `DataCollatorForLanguageModeling`        |
+| Seq2Seq                | `DataCollatorForSeq2Seq`                |
+| Token Classification   | `DataCollatorForTokenClassification`     |
 
 ``` python
 from transformers import DataCollatorWithPadding, AutoTokenizer

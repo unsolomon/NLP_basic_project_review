@@ -50,18 +50,32 @@
 
 ## 3. 앙상블 기법
 
--   **Voting**: 여러 모델의 예측을 투표 방식으로 결합하여 최종 예측 결정
--   **Bagging**: 데이터를 여러 번 샘플링하여 여러 모델 학습 후
-    평균/다수결 결정 (예: Random Forest)
--   **Boosting**: 약한 학습기를 순차적으로 학습시켜 강한 학습기 생성
-    (예: AdaBoost, Gradient Boosting)
+- **Voting**  
+  여러 모델의 예측을 투표 방식으로 결합하여 최종 예측을 결정
 
-**응용** - **N21, N2N**: Voting, Bagging, Boosting - **N21, N2N, N2M**:
-Average Log-probability, Router, Mixture of Experts (MoE)
+- **Bagging**  
+  데이터를 여러 번 샘플링하여 여러 모델을 학습 후, 평균 또는 다수결로 최종 예측 결정  
+  (예: Random Forest)
 
-**세부** - **Average Log-probability**: 여러 모델의 로그 확률을 평균 -
-**Mixture of Experts (MoE)**: 입력 데이터의 특정 부분을 다른 전문가
-모델이 처리 - **Router**: 입력에 따라 적절한 모델을 선택하는 분류기
+- **Boosting**  
+  약한 학습기를 순차적으로 학습시켜 강한 학습기를 만드는 방식  
+  (예: AdaBoost, Gradient Boosting)
+  
+---
+### 응용 분야
+- **N21, N2N**  
+  - Voting, Bagging, Boosting 기법 적용 가능
+- **N21, N2N, N2M**  
+  - Average Log-probability, Router, Mixture of Experts (MoE) 기법 적용 가능
+---
+### 세부 기법
+- **Average Log-probability**  
+  여러 모델의 로그 확률을 평균내어 최종 예측 결정
+- **Mixture of Experts (MoE)**  
+  입력 데이터의 특정 부분을 서로 다른 전문가 모델들이 분담하여 처리
+- **Router**  
+  MoE 내부에서, 입력에 따라 적절한 전문가 모델을 선택하는 분류기
+
 
 ------------------------------------------------------------------------
 
